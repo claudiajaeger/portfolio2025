@@ -20,7 +20,7 @@ module.exports = {
         opensans: ['"Open Sans"', 'sans-serif'],
         dmsans: ['"DM Sans"', 'sans-serif'],
         baskerville: ['"Baskerville"', 'serif'],
-        trafit: ["Trafit", "sans-serif"],
+        trafit: ['"Trafit Personal Use"', 'serif'],
         eczar: ['"Eczar"', 'serif'],
       },
     },

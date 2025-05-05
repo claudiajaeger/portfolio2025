@@ -214,7 +214,7 @@ const LandingPage: React.FC<LandingPageProps> = ({aboutRef, workRef, contactRef}
                 </defs>
                 <text fill="currentColor" fontSize="14" fontFamily="sans-serif">
                 <textPath href="#circlePath" startOffset="0%">
-                    HALLO! HEJ! こんにちは! WELCOME TO MY PORTFOLIO! GRAB A CUPPA AND STAY A WHILE. ☺
+                    HALLO! HEJ! こんにちは! WELCOME TO MY PORTFOLIO! GRAB A CUPPA AND STAY A WHILE. ☺ 
                 </textPath>
                 </text>
             </motion.svg>
