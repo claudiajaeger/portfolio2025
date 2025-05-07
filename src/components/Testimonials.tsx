@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 const testimonials = [
     {
-        quote: "I worked with Claudia during one of the most remarkable AI boom in our industry. Claudia's eye for design, full stack experience and collaborative nature was instrumental in helping the Gen AI Accelerator gain traction and become one of the early success stories at our company",
+        quote: "I worked with Claudia during one of the most remarkable AI boom in our industry. Claudia's eye for design, full stack experience and collaborative nature was instrumental in helping the Gen AI Accelerator gain traction and become one of the early success stories at our company.",
         name: "Roberto Beltran",
         role: "AI Innovation Executive",
       },

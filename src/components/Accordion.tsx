@@ -5,15 +5,15 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqs = [
   {
     question: "Are you open to full-time roles or freelance?",
-    answer: "Yes! I'm currently open to full-time opportunities and selected freelance projects. Reach out to me down below and let's chat!",
+    answer: "Yes! I'm currently open to full-time opportunities and selected freelance projects. Feel free to reach out below, I'd love to chat!",
   },
   {
     question: "What can you help with?",
-    answer: "UX/UI design, front-end development, and UX/UI consulting or support. I can help with any design stage or code management from concept to final hand-off. From creating wireframes to high-fidelity prototypes, user journey mapping, storyboards, design systems, user research or evaluating user feedback. I can design or build the interface in great detail and in an organized manner, focusing on promoting best practices in terms of code and design, accessibility and more.  I can also help with visual design, AI and illustrations. See my resume for more details.",
+    answer: "UX/UI design, front-end development, and UX/UI consulting or support. I can help with any design stage or code management from concept to final hand-off. From creating wireframes to high-fidelity prototypes, user journey mapping, storyboards, design systems, user research or evaluating user feedback. I can design or build the interface in great detail and in an organized manner, focusing on promoting best practices in terms of code and design, accessibility and more.  I can also help with visual design, GenAI and illustrations. See my resume for more details.",
   },
   {
     question: "What was this portfolio built with?",
-    answer: "React, TypeScript, TailwindCSS and Framer Motion (which I love!).",
+    answer: "React, TypeScript, TailwindCSS, and Framer Motion (which I love!). The illustrations were made with Procreate, and the portfolio design was ideated and iterated in Figma.",
   },
   {
     question: "Where are you currently based?",

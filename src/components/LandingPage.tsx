@@ -2,10 +2,11 @@ import { useEffect, useState }from "react";
 import React from "react";
 import {AnimatePresence, motion, useScroll, useTransform} from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Popup from "./Popup";
 import FAQAccordion from "./Accordion";
 import Testimonials from "./Testimonials";
+import MobilePopup from "./MobilePopup";
 
 
 interface LandingPageProps {
@@ -58,8 +59,20 @@ const LandingPage: React.FC<LandingPageProps> = ({aboutRef, workRef, contactRef}
         return () => clearInterval(interval);
     }, []);
 
+    const [showContent, setShowContent] = useState(true);
+
+    useEffect(() => {
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
+        if (isMobile) {
+          setShowContent(false);
+        }
+      }, []);
+
     return (
         <div>
+        <MobilePopup/>
+        {showContent && (
+        <main>
         {/* Landing Page Section */}
         <motion.div
         id="landing"
@@ -419,27 +432,25 @@ const LandingPage: React.FC<LandingPageProps> = ({aboutRef, workRef, contactRef}
         className="flex items-center justify-center mt-60"
         initial="hidden"
         whileInView="visible"
-        viewport={{once:true}}
+        viewport={{ once: true }}
         variants={fadeInFromBottom}
         >
-            <motion.div
-                className="flex"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
+        <motion.div
+            className="flex"
+            variants={containerVariants}
+        >
+            {text.split("").map((char, index) => (
+            <motion.span
+                key={index}
+                className="text-5xl font-trafit sm:text-9xl md:text-9xl font-normal text-medium-black cursor-default"
+                variants={letterVariants}
             >
-                {text.split("").map((char, index) => (
-                <motion.span
-                    key={index}
-                    className="text-5xl font-trafit sm:text-9xl md:text-9xl font-normal text-medium-black cursor-default"
-                    variants={letterVariants}
-                >
-                    {char === " " ? "\u00A0" : char}
-                </motion.span>
-                ))}
-            </motion.div>
-            
+                {char === " " ? "\u00A0" : char}
+            </motion.span>
+            ))}
         </motion.div>
+        </motion.div>
+
     </motion.section>
     </div>
     {/* Testimonials Section */}
@@ -525,6 +536,12 @@ const LandingPage: React.FC<LandingPageProps> = ({aboutRef, workRef, contactRef}
                 className="text-medium-black transition-colors duration-300 text-2xl">
                     <FontAwesomeIcon icon={faLinkedin} />
                 </a>
+                <a href="https://www.instagram.com/claudiajaegr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-medium-black transition-colors duration-300 text-2xl">
+                    <FontAwesomeIcon icon={faInstagram} />
+                </a>
             </motion.div>
         </motion.div>
         {/* Right side illustration section */}
@@ -543,7 +560,10 @@ const LandingPage: React.FC<LandingPageProps> = ({aboutRef, workRef, contactRef}
       </motion.section>
       {/* Popup Notification */}
       <Popup />
+    
     </div>
+    </main>
+        )}
     </div>
     )
 }

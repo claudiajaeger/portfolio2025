@@ -10,11 +10,11 @@ const PopupNotification: React.FC = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 50, opacity: 0 }}
-            transition={{ duration: 0.5, delay: 4, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 2, ease: "easeOut" }}
         >
             {/* Message Text */}
             <p className="text-sm font-normal italic font-dmsans">
-                Hi there! This site is best viewed on a laptop screen.  
+                Hi there! This site is best viewed on a desktop screen.  
                 Responsiveness coming soon. Thank you for your patience. 🌷
             </p>
 
