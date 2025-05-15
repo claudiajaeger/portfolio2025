@@ -48,7 +48,7 @@ const LandingPage: React.FC<LandingPageProps> = ({aboutRef, workRef, contactRef}
         }},
     };
 
-    const hobbies = ["world traveler", "greenophile", "font enthusiast", "coffee addict", "pasta and soup nerd", "sun lover", "social butterfly", "bookworm", "jazz music fan"]
+    const hobbies = ["world traveler", "greenophile", "font enthusiast", "coffee addict", "bookworm", "sun lover", "social butterfly", "pasta and soup nerd", "jazz music fan"]
     const [hobbyIndex, setHobbyIndex] = useState(0);
 
     useEffect(() => {
