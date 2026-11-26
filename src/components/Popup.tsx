@@ -14,7 +14,7 @@ const PopupNotification: React.FC = () => {
         >
             {/* Message Text */}
             <p className="text-sm font-normal italic font-dmsans">
-                Hi there! This site is best viewed on a desktop screen.  
+                Hi there! This site is under construction and is best viewed on a desktop screen.  
                 Responsiveness coming soon. Thank you for your patience. 🌷
             </p>
 
